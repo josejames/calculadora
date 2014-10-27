@@ -5,8 +5,8 @@ python:
 install: "pip install -r requirements.txt"
 
 before_script:
- - autopep8 -ir *
- - flake8 --max-complexity=3 --exclude=*.txt,*.md --max-line-length=200 *
+ - autopep8 -ir *.py
+ - flake8 --max-complexity=3 --exclude=*.txt,*.md --max-line-length=200 *.py
 
 script:
  - lettuce test
